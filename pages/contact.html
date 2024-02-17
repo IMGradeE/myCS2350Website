@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/styles/global.css" rel="stylesheet">
+    <!--TODO add script-->
+    <title>Contact</title>
+</head>
+<body>
+<header>
+    <div class="gridNoDecor">
+        <div class="col_1-1">
+            <div class="col_1-10"><a href="../index.html"><img src="../images/logo.png"></a></div>
+            <div class="col_3-10">&nbsp;</div>
+
+            <div class="col_6-10" id="colheaderinner">
+                <a class="headerAnchor" href="/pages/resume.html"><h1>Resume</h1></a>
+                <a class="headerAnchor" href="/pages/academichistory.html"><h1>Academics</h1></a>
+                <a class="headerAnchor" href="/pages/projects.html"><h1>Projects</h1></a>
+                <a class="headerAnchor" href="/pages/contact.html"><h1>Contact</h1></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="gridNoDecor">
+<form  action=""  method="post">
+    <!--TODO add action-->
+    <fieldset class="outerFieldset">
+        <legend><h1>Contact</h1></legend>
+    <div class="rowBottomMargin">
+        <div class="col_1-6">
+            <div class="col_1-20">&nbsp;</div>
+            <div class="col_19-20">
+                <div class="row">
+                    <div class="col_1-20">&nbsp;</div>
+                    <div class="col_19-20">
+                        <div class="col_1-3">
+                            <label for="nameBox">Name</label>
+                        </div>
+                        <div class="col_2-3">
+                            <input name="firstLastName" id="nameBox" type="text" required placeholder="Full name ">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col_1-20">&nbsp;</div>
+                    <div class="col_19-20">
+                        <div class="col_1-3">
+                            <label for="companyBox">Company</label>
+                        </div>
+                        <div class="col_2-3">
+                            <input name="companyName" id="companyBox" type="text" placeholder="(If applicable) ">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col_1-20">&nbsp;</div>
+                    <div class="col_19-20">
+                        <div class="col_1-3">
+                            <label for="phoneBox">Phone</label>
+                        </div>
+                        <div class="col_2-3">
+                            <input name="phoneNumber" id="phoneBox" type="tel" placeholder="+1-555-1234 " pattern="" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col_1-20">&nbsp;</div>
+                    <div class="col_19-20">
+                        <div class="col_1-3">
+                            <label for="emailBox">Email</label>
+                        </div>
+                        <div class="col_2-3">
+                            <input name="email" id="emailBox" type="email" placeholder="user@domain.example " pattern="" required>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row">
+                <div class="col_1-20">&nbsp;</div>
+                <div class="col_19-20">
+                    <div class="col_1-1">
+                        <label for="subjectBox">Subject</label>
+                        <select name="messageSubject" id="subjectBox" required>
+                            <option name="employment">Employment Offer</option>
+                            <option name="personal">Personal Inquiry</option>
+                            <option name="professional">Professional Inquiry</option>
+                            <option name="other">Other</option>
+                            <option name="hidden" style="visibility: hidden;" selected></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rowBottomMargin">
+                <div class="col_1-1">
+                    <div class="col_1-20">&nbsp;</div>
+                    <div class="col_19-20">
+                        <label>Is the message urgent?</label>
+                    </div>
+                </div>
+                <div class="col_1-2">
+                    <div class="rowNoMargin" id="radioRow">
+                        <div class="col_2-3">
+                            <label class="radioin" for="urgentF">No</label>
+                        </div>
+                        <div class="col_1-3">
+                            <input class="radioin" name="urgent" id="urgentF" value="0" type="radio">
+                        </div>
+                    </div>
+                </div>
+                <div class="col_1-2">
+                    <div class="rowNoMargin" id="radioRow2">
+                        <div class="col_2-3">
+                            <label class="radioin" for="urgentT">Yes</label>
+                        </div>
+                        <div class="col_1-3">
+                            <input class="radioin" name="urgent" id="urgentT" value="1" type="radio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        <div class="col_5-6">
+            <fieldset>
+                <legend><h2>Your Message</h2></legend>
+                <textarea name="messageBody" id="messageBox" placeholder="Your message goes here."></textarea>
+            </fieldset>
+        </div>
+        </div>
+<!--TODO SUBMIT AND RESET BUTTON YOU TWAT-->
+    </fieldset>
+        </form>
+    </div>
+</body>
+</html>

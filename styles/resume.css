@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+legend h1{
+    margin-left: -4px;
+}
+ul{
+    margin-top: 0;
+}
+li::marker{
+    color: cadetblue;
+}
+legend h3{
+    margin-left: 0;
+    text-align: left;
+    margin-bottom: 12px;
+}
+i#git{
+    margin-left: 2px;
+    vertical-align: text-top;
+    font-size: x-large;
+}
+i{
+    vertical-align: text-top;
+}
+p{
+    margin-left: 4px;
+    margin-top: 0;
+}
+fieldset{
+    padding-left: 20px;
+}
+fieldset.cvSect{
+    width: 100%;
+    border: transparent;
+    border-top: 2px solid darkslategray;
+    border-radius: 0;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+legend.cvSect{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    text-align: left;
+}
+hr{
+    margin-top: 17px;
+}
+div.col_3p{
+    width: 3%;
+}
+div.col_48p{
+    width: 48%;
+}
+div.col_49p{
+    width: 49%;
+}
