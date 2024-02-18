@@ -18,6 +18,7 @@ p, h1, h2, h3, body, header, html, a, article, div, input, footer, img, select, 
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 a > img{
     max-width: 50px;
     max-height: 50px;
@@ -35,6 +36,23 @@ a:link, a:visited{
     text-decoration: none;
 }
 
+a:hover, a:active{
+    animation-name: aInteract;
+    animation-duration: 300ms;
+    animation-delay: .1s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+@keyframes aInteract {
+    from{
+        letter-spacing: normal;
+    }
+    to{
+        letter-spacing: .005em;
+        text-shadow: aliceblue 5px 1px 4px;
+    }
+}
 
 h1{
     text-align: right;
@@ -75,7 +93,8 @@ body{
     aliceblue 100%);
 }
 header{
-    height: 150px;
+    margin-top: 32px;
+    margin-bottom: 20px;
 }
 .headerAnchor{
     background-image: none ;
@@ -85,12 +104,27 @@ h1, h2, h3{
     margin: 5px 0 5px 0;
 }
 /*---------------------------------------------------- FORM STYLES --------------------------------------------------*/
+form{
+    height: min-content;
+    width: 100%;
+}
+.pattern:focus:valid{
+    background-color: rgba(60, 179, 113, 0.1); /*Medium sea green*/
+}
+.pattern:focus:invalid{
+    background-color: rgba(219, 112, 147, 0.1); /*Palevioletred*/
+}
 input[type="submit"], input[type="reset"]{
     height: 35px;
-    width: 49%;
-    float: bottom;
-    clear: both;
-    margin-bottom:10px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(176, 224, 230, 0.1);
+}
+input[type="submit"]:hover, input[type="submit"]:active{
+    background-color: rgba(60, 179, 113, 0.1); /*Medium sea green*/
+}
+input[type="reset"]:hover, input[type="reset"]:active{
+    background-color: rgba(219, 112, 147, 0.1); /*Palevioletred*/
 }
 input, label, select{
     width: 100%;
@@ -102,6 +136,7 @@ input {
     text-align: right;
     line-height: 35px;
     vertical-align: center;
+    font-size: medium;
 }
 input::placeholder{
     font-size: x-small;
@@ -148,12 +183,16 @@ textarea{
     height: 340px;
     background-color: aliceblue;
     border: transparent;
-
+    border-radius: 12px;
 }
 legend h1, legend h3{
+    margin-top: 0;
     margin-bottom: 0;
 }
-
+hr{
+    color: darkslategray;
+    margin: 0 0 0 0;
+}
 /*---------------------------------------------------- DIV STYLES ---------------------------------------------------*/
 div{
 
@@ -168,9 +207,11 @@ div.grid{
     border: 1px solid slategray;
     border-radius: 12px;
     background-color: aliceblue;
-    box-shadow: 0 0 150px 100px rgba(243, 251, 255, 0.5);
+/*    box-shadow: 0 0 150px 10px rgba(243, 251, 255, 0.5);*/
 }
+
 div.gridNoDecor{
+    height: min-content;
     width: 100%;
     clear: both;
     margin: 0 auto;
@@ -178,11 +219,11 @@ div.gridNoDecor{
 }
 div.row{
     width: 100%;
-    float: bottom;
+    float: left;
     clear: both;
     max-width: 1700px;
     height: min-content;
-    margin: 24px 0 0 0;
+    margin: 24px 0 12px 0;
     background-color: #f3fbff;
     border-radius: 10px;
     border: 1px solid rgba(119, 136, 153, 0.2);
@@ -200,10 +241,13 @@ fieldset{
 fieldset.outerFieldset{
     width: 100%;
     border: transparent;
-    box-shadow: 0 0 100px 10px rgba(243, 251, 255, 0.5);
+    height: min-content;
+    box-shadow: 0 0 50px 10px rgba(243, 251, 255, 0.5);
 }
 div.rowNoMargin{
-    float: bottom;
+    margin: 0 0 0 0;
+    width: 100%;
+    float: left;
     clear: both;
     height: min-content;
     background-color: #f3fbff;
@@ -212,13 +256,14 @@ div.rowNoMargin{
 }
 
 div.rowBottomMargin{
-    float: bottom;
+    width: 100%;
+    float: left;
     clear: both;
     height: min-content;
     background-color: #f3fbff;
     border-radius: 10px;
     border: 1px solid rgba(119, 136, 153, 0.2);
-    margin: 24px 0 24px 0;
+    margin: 12px 0 24px 0;
 }
 div.col_1-1{
     width: 100%;
