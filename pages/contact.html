@@ -23,8 +23,7 @@
 </header>
 
 <div class="gridNoDecor">
-<form  action=""  method="post">
-    <!--TODO add action-->
+<form id="message" action="https://icarus.cs.weber.edu/~linda/cs2350/submit.php"  method="post">
     <fieldset class="outerFieldset">
         <legend><h1>Contact</h1></legend>
     <div class="rowBottomMargin">
@@ -71,9 +70,9 @@
                             <label for="emailBox">Email</label>
                         </div>
                         <div class="col_2-3">
-                            <input class="pattern" name="email" id="emailBox" type="email" placeholder="user@domain.example " pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                            <input class="pattern" name="email" id="emailBox" type="email" placeholder="user@domain.example " pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required>
                             <!--
-                            Regular Expression from w3 schools
+                            Regular Expression from w3 schools, added capital letters.
                                 https://www.w3schools.com/tags/att_input_pattern.asp
                             -->
                         </div>
@@ -130,7 +129,7 @@
         <div class="col_5-6">
             <fieldset>
                 <legend><h2>Your Message</h2></legend>
-                <textarea name="messageBody" id="messageBox" placeholder="Your message goes here."></textarea>
+                <textarea name="messageBody" id="messageBox" placeholder="Your message goes here." required></textarea>
             </fieldset>
         </div>
         </div>
@@ -139,7 +138,7 @@
             <div class="col_1-2">
                 <div class="col_4-10">
                     <div class="rowNoMargin">
-                        <input type="submit" value="Send Message">
+                        <input name="submit" type="submit" value="Send Message">
                     </div>
                 </div>
                 <div class="col_1-10">&nbsp;</div>
