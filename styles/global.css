@@ -260,6 +260,22 @@ div.row{
     border-radius: 10px;
     border: 1px solid rgba(119, 136, 153, 0.2);
 }
+h3.h3NoMargin{
+    margin:  0 0 0 0;
+    padding: 0 0 0 0;
+}
+div.rowAcademic {
+    width: 100%;
+    float: left;
+    clear: both;
+    max-width: 1700px;
+    height: min-content;
+    margin: 24px 0 12px 0;
+    background-image: radial-gradient(circle at bottom right, rgba(240, 248, 255, 0.46), rgba(198, 227, 255, 0.22) 50%, rgba(240, 248, 255, 0.46) 100%);
+    border-radius: 10px;
+    border: 1px solid rgba(119, 136, 153, 0.2);
+    padding: 20px 30px;
+}
 fieldset{
     width: 98%;
     margin-left: 1%;
@@ -317,6 +333,12 @@ div.col_1-2margin{
 }
 div.col_1-3{
     width: 33.33%;
+}
+div.col_45p{
+     width: 45%;
+ }
+div.col_5p{
+    width: 5%;
 }
 div.col_2-3{
     width: 66.67%;
